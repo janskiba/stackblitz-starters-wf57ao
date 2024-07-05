@@ -1,0 +1,8 @@
+<p>Name in first component as input: {{ exampleInput.name }}</p>
+<p>Name in first component as value: {{ exampleService.exampleState.name }}</p>
+<!-- <p>Name in first component as observable: {{ subjectData.name }}</p> -->
+
+<p>
+  Name in first component as observable:
+  {{ (exampleService.exampleStateSubject | async)?.name }}
+</p>
